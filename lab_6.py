@@ -19,16 +19,23 @@ def recursive(n, memo={0: 1, 1: 1}):
     return memo[n]
 
 
+import math
+
+
 def iterative(n):
     if n == 0 or n == 1:
         return 1
+
     znach_1 = 1  # F(0)
     znach_2 = 1  # F(1)
+    factorial_n = 1
+
     for i in range(2, n + 1):
-        factorial_n = math.factorial(i)
+        factorial *= i
         last = (-1 if i % 2 else 1) * (2 * znach_2 / factorial_n + znach_1)
         znach_1 = znach_2
         znach_2 = last
+
     return last
 
 
