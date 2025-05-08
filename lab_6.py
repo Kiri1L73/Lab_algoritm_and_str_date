@@ -1,5 +1,4 @@
 import timeit
-import math
 import matplotlib.pyplot as plt
 
 n = int(input("Введите число n: "))
@@ -17,10 +16,6 @@ def recursive(n, memo={0: 1, 1: 1}):
         factorial_n = fact(n)
         memo[n] = (-1 if n % 2 else 1) * (2 * recursive(n - 1, memo) / factorial_n + recursive(n - 2, memo))
     return memo[n]
-
-
-import math
-
 
 def iterative(n):
     if n == 0 or n == 1:
