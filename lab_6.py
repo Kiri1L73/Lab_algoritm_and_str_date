@@ -31,7 +31,7 @@ def iterative(n):
     factorial_n = 1
 
     for i in range(2, n + 1):
-        factorial *= i
+        factorial_n *= i
         last = (-1 if i % 2 else 1) * (2 * znach_2 / factorial_n + znach_1)
         znach_1 = znach_2
         znach_2 = last
